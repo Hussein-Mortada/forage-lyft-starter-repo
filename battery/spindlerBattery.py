@@ -1,5 +1,5 @@
 from battery.battery import Battery
-from battery.utilities import addYears
+from battery.utilities import add_years_to_date
 
 
 class SpindlerBattery(Battery):
@@ -7,7 +7,7 @@ class SpindlerBattery(Battery):
         self.currentDate = currentDate
         self.lastServiceDate = lastServiceDate
 
-        def needsService(self):
-            shouldBeServicedBy = addYears(self.lastServiceDate,2)
-            return shouldBeServicedBy < self.currentDate
+    def needsService(self):
+        shouldBeServicedBy = add_years_to_date(self.lastServiceDate,2)
+        return shouldBeServicedBy < self.currentDate
 
