@@ -8,6 +8,6 @@ class SpindlerBattery(Battery):
         self.lastServiceDate = lastServiceDate
 
     def needsService(self):
-        shouldBeServicedBy = add_years_to_date(self.lastServiceDate,2)
+        shouldBeServicedBy = add_years_to_date(self.lastServiceDate,3)
         return shouldBeServicedBy < self.currentDate
 
